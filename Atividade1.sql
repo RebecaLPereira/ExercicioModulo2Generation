@@ -1,17 +1,21 @@
+-- Criando um novo banco de dados (create database NOME_DO_BANCO)
 CREATE DATABASE sistema_rh;
 
+-- Selecionando o banco de dados para funcionamento
 USE sistema_rh;
 
-
-CREATE TABLE tabela_colaboradores (
-  id bigint NOT NULL AUTO_INCREMENT,
-  nome varchar(10) DEFAULT NULL,
-  salario float DEFAULT NULL,
-  cargo varchar(20) DEFAULT NULL,
-  data_nascimento date DEFAULT NULL,
-  PRIMARY KEY (id)
+-- Criando a tabela com ATRIBUTOS
+CREATE TABLE tabela_colaboradores(
+	-- AUTO_INCREMENT: cria uma sequência de numeros automática, NUMERO++
+	id BIGINT AUTO_INCREMENT,
+    nome VARCHAR(10),
+    salario FLOAT,
+    cargo VARCHAR(20),
+    data_nascimento DATE,
+    
+    -- Define ID como chave primária(não permite valores duplicado)
+    PRIMARY KEY(id)
 );
-
 
 INSERT INTO tabela_colaboradores (nome, salario, cargo, data_nascimento)
 -- Sempre colocar aspas ' ou " em valores atribuidos em VARCHAR
