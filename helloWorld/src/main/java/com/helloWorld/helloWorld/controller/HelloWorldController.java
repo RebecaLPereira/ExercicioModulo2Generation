@@ -23,4 +23,8 @@ public class HelloWorldController {
 				+ "\nProatividade"
 				+ "\nTrabalho em equipe";
 	}
+	@GetMapping("/objetivo-aprendizagem")
+	public String objetivoAprendizagem() {
+		return "Orientação ao Futuro";
+	}
 }
